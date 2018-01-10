@@ -1,24 +1,21 @@
 import { InjectionToken } from '@angular/core';
 
-import { RpnStack } from '../models/rpn-stack';
-
 export const IRpnStackServiceToken = new InjectionToken('IRpnStackServiceToken');
-export interface IRpnStackerService{
+export interface IRpnStackService{
 
     // Gets x-stack from stacks
-    getXStack(): string[];
+    getXStack(): number;
 
     // Gets y-stack from stacks
-    getYStack(): string[];
+    getYStack(): number;
 
     // Drops x-stack
     dropStack(): void;
 
-    // Converts x-stack array to string
-    stackToString(): string;
-
     // Converts x-stack array to number
-    stackToNumber(): number;
+    appendToStack(
+        value: number,
+    ): void;
 
     // Swaps x and y stacks
     swapStacks(): void;
