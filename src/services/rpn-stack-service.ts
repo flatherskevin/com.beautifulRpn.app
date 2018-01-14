@@ -24,6 +24,8 @@ export class RpnStackService implements IRpnStackService{
         const xStack = this.stackArray[0];
         this.stackArray[0] = Number(`${xStack}`);
     }
+
+    // TODO: Possibly move this out of the service
     public swapStacks(): void {
         throw new Error("Method not implemented.");
     }
